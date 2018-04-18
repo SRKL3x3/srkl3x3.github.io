@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   
-<!-- Mirrored from eyecix.com/html/sportsmagazine/404.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Apr 2018 15:49:04 GMT -->
+<!-- Mirrored from eyecix.com/html/sportsmagazine/contact-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Apr 2018 15:50:29 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>SportsMagazine 404 Page</title>
+    <title>SportsMagazine Contact Us</title>
 
     <!-- Css Files -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -33,7 +33,7 @@
     <div class="sportsmagazine-main-wrapper">
 
         <!--// Header \\-->
-        <header id="sportsmagazine-header" class="sportsmagazine-header-one">
+		<header id="sportsmagazine-header" class="sportsmagazine-header-one">
             
            <!--// MainSection \\-->
             <div class="sportsmagazine-main-header">
@@ -58,24 +58,24 @@
                                                 <li><a href="index.html">Naujienos</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Komandos</a>
+                                        <li><a href="#">Lyga</a>
                                             <ul class="sportsmagazine-dropdown-menu">
                                                 <li class="row">
-                                                            <li><a href="fixture.html">Komandos</a></li>
-                                                            <li><a href="fullstanding.html">Rezultatai</a></li>
+                                                            <li><a href="fixture.html">Rezultatai</a></li>
+                                                            <li><a href="fullstanding.html">Lentelė</a></li>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li><a href="#">Žaidėjai</a>
                                             <ul class="sportsmagazine-dropdown-menu">
-                                                <li><a href="player-grid.html">Player Grid</a>
+                                                <li><a href="player-grid.html">Komandos</a>
                                                 <li><a href="overview.html">Lyderiai</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="#">Kita</a>
                                             <ul class="sportsmagazine-dropdown-menu">
                                                 <li><a href="gallery.html">Galerija</a>
-                                                <li><a href="contact-us.html">Informacija</a></li>
+                                                <li><a href="overview.html">Informacija</a></li>
                                             </ul>
                                         </li>
                                       </ul>
@@ -89,9 +89,8 @@
             </div>
             <!--// MainSection \\-->
 
-
         </header>
-        <!--// Header \\-->
+		<!--// Header \\-->
 
 		<!--// SubHeader \\-->
         <div class="sportsmagazine-subheader">
@@ -99,12 +98,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Error 404</h1>
+                        <h1>Kontaktai</h1>
                     </div>
                     <div class="col-md-12">
                         <ul class="sportsmagazine-breadcrumb">
-                            <li><a href="index-2.html">Home</a></li>
-                            <li>Error 404</li>
+                            <li><a href="index-2.html">Pagrindinis</a></li>
+                            <li>Kontaktai</li>
                         </ul>
                     </div>
                 </div>
@@ -113,67 +112,118 @@
         <!--// SubHeader \\-->
 
 		<!--// Main Content \\-->
-		<div class="sportsmagazine-main-content sportsmagazine-error-page">
-            <span class="sportsmagazine-error-transparent"></span>
+		<div class="sportsmagazine-main-content">
 
 			<!--// Main Section \\-->
-			<div class="sportsmagazine-main-section sportsmagazine-error-pagefull">
+			<div class="sportsmagazine-main-section sportsmagazine-contactus-full">
 				<div class="container">
 					<div class="row">
-						
-						<div class="col-md-12">
-                            <div class="sportsmagazine-error-wrap">
-                                <div class="sportsmagazine-error-heading">
-                                    <span class="error-shape-one">4</span>
-                                    <span class="error-shape-two"><small></small>0</span>
-                                    <span class="error-shape-three">4</span>
-                                </div>
-                                <h3>NOT FOUND</h3>
-                                <span>The requested page cannot be found</span>
-                                <p>Can't find what you need? Take a moment and do a search below.</p>
-                                <form>
-                                    <input type="text" value="Type here" onblur="if(this.value == '') { this.value ='Type here'; }" onfocus="if(this.value =='Type here') { this.value = ''; }">
-                                    <label>
-                                        <input type="submit" value="Search">
-                                    </label>
-                                </form>
+                        
+                        <div class="col-md-12">
+                            <div class="sportsmagazine-fancy-title-two"><h2>Žemėlapis <span></span></h2></div>
+                            <div class="sportsmagazine-contact-map"><div id="map"></div></div>
+							    <script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 6
+        });
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+    </script>
+                            <div class="sportsmagazine-fancy-title-two"><h2>Kontaktai <span></span></h2></div>
+                            <div class="sportsmagazine-contactus-info">
+                                <ul class="row">
+                                    <li class="col-md-2">
+                                        <div>
+                                            <p></p>
+                                            <p></p>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <i class="fa fa-map-marker"></i>
+                                        <div class="sportsmagazine-contact-text">
+                                            <p>3824 8, Paluobiai 71246</p>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <i class="fa fa-envelope"></i>
+                                        <div class="sportsmagazine-contact-text">
+                                            <a href="mailto:name@email.com">modestaskazlauskas1@gmail.com</a>
+                                            <a href="mailto:name@email.com">siugzdad@gmail.com</a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
+
 
 					</div>
 				</div>
 			</div>
 			<!--// Main Section \\-->
 
-		</div>
-		<!--// Main Content \\-->
-		<!--// Footer \\-->
-		<footer id="sportsmagazine-footer" class="sportsmagazine-footer-one">
-            
-            <!--// Footer Widget \\-->
-            <div class="sportsmagazine-footer-widget">
+            <!--// Main Section \\-->
+            <div class="sportsmagazine-main-section">
                 <div class="container">
                     <div class="row">
-                        <!--// Widget Contact Info \\-->
-                        <aside class="col-md-4 widget widget_contact_info">
-                            <ul class="sportsmagazine-social-network">
-                                <li><a href="https://www.facebook.com/" class="sportsmagazine-colorhover fa fa-facebook-official"></a></li>
-                                <li><a href="https://twitter.com/login" class="sportsmagazine-colorhover fa fa-twitter-square"></a></li>
-                                <li><a href="https://pk.linkedin.com/" class="sportsmagazine-colorhover fa fa-linkedin-square"></a></li>
-                                <li><a href="https://plus.google.com/" class="sportsmagazine-colorhover fa fa-google-plus-square"></a></li>
-                            </ul>
-                            <ul class="sportsmagazine-info-list">
-                                <li><i class="fa fa-map-marker"></i> <span>-</span></li>
-                                <li><i class="fa fa-phone"></i> <span>-</span></li>
-                                <li><i class="fa fa-envelope"></i> <span><a href="mailto:name@email.com">siugdzdad@gmail.com</a></span></li>
-                            </ul>
-                        </aside>
+                        
+                        <div class="col-md-12">
+                            <!--// Partner \\-->
+                            <div class="sportsmagazine-fancy-title-two"><h2>Partneriai/Rėmėjai<span></span></h2></div>
+                            <div class="sportsmagazine-partner-slider">
+                                <div> <a href="404.html"><img src="extra-images/partner-logo-1.jpg" alt=""></a> </div>
+                                <div> <a href="404.html"><img src="extra-images/partner-logo-2.jpg" alt=""></a> </div>
+                                <div> <a href="404.html"><img src="extra-images/partner-logo-3.jpg" alt=""></a> </div>
+                                <div> <a href="404.html"><img src="extra-images/partner-logo-1.jpg" alt=""></a> </div>
+                                <div> <a href="404.html"><img src="extra-images/partner-logo-3.jpg" alt=""></a> </div>
+                            </div>
+                            <!--// Partner \\-->
+                        </div>
 
                     </div>
                 </div>
-                <a href="#" class="sportsmagazine-back-top"><i class="fa fa-angle-up"></i></a>
             </div>
-            <!--// Footer Widget \\-->
+            <!--// Main Section \\-->
+
+		</div>
+		<!--// Main Content \\-->
+
+		<!--// Footer \\-->
+		<footer id="sportsmagazine-footer" class="sportsmagazine-footer-one">
 
             <!--// CopyRight \\-->
             <div class="sportsmagazine-copyright">
@@ -204,10 +254,25 @@
     <script type="text/javascript" src="script/isotope.min.js"></script>
     <script type="text/javascript" src="script/progressbar.js"></script>
     <script type="text/javascript" src="script/counter.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ6JZMrZWmiMUP3SHUwfAiqne5YlR9KCg&callback=initMap"></script>
+
+	<script>
+      function initMap() {
+        var uluru = {lat: 54.880928, lng: 23.262025};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+	
     <script type="text/javascript" src="script/functions.js"></script>
 
   </body>
 
-<!-- Mirrored from eyecix.com/html/sportsmagazine/404.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Apr 2018 15:49:04 GMT -->
+<!-- Mirrored from eyecix.com/html/sportsmagazine/contact-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Apr 2018 15:50:29 GMT -->
 </html>
