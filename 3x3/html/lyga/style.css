@@ -7860,10 +7860,10 @@ blockquote span:before {
 .sportsmagazine-footer-widget {
     float: left;
     width: 100%;
-    padding: 80px 0px 40px 0px;
+    padding: 20px 0px 0px 0px;
     position: relative;
 }
-.sportsmagazine-footer-widget .widget                                   { margin-bottom: 40px; }
+.sportsmagazine-footer-widget .widget                                   { margin-bottom: 20px; }
 .sportsmagazine-footer-widget p,.sportsmagazine-footer-widget a         { color: #999999; }
 /* Footer Widget Title */
 .footer-widget-title {
